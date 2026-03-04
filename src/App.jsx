@@ -1,4 +1,6 @@
 import './App.css'
+import Banner from './Components/Banner/Banner'
+import Main from './Components/Main/Main'
 
 function App() {
 
@@ -26,7 +28,11 @@ function App() {
         </div>
       </section>
 
+      {/* Banner Section */}
+      <Banner></Banner>
 
+      {/* Main Section */}
+      <Main></Main>
     </>
   )
 }

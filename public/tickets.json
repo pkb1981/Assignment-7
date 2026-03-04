@@ -1,0 +1,137 @@
+[
+  {
+    "id": "TCK-1001",
+    "title": "Login page not loading",
+    "description": "Users report that the login page returns a 500 error when accessed from the main website.",
+    "customer": "Acme Corp",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2026-02-18T09:15:00Z"
+  },
+  {
+    "id": "TCK-1002",
+    "title": "Payment gateway timeout",
+    "description": "Transactions are timing out during checkout for credit card payments.",
+    "customer": "BrightTech Solutions",
+    "priority": "Critical",
+    "status": "In Progress",
+    "createdAt": "2026-02-19T11:42:00Z"
+  },
+  {
+    "id": "TCK-1003",
+    "title": "UI alignment issue on dashboard",
+    "description": "Widgets overlap on smaller screen sizes (13-inch laptops).",
+    "customer": "Northwind Traders",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2026-02-20T08:30:00Z"
+  },
+  {
+    "id": "TCK-1004",
+    "title": "Unable to reset password",
+    "description": "Password reset emails are not being delivered to users.",
+    "customer": "Globex Corporation",
+    "priority": "High",
+    "status": "Resolved",
+    "createdAt": "2026-02-17T14:05:00Z"
+  },
+  {
+    "id": "TCK-1005",
+    "title": "Incorrect invoice calculation",
+    "description": "Tax is being calculated incorrectly for EU customers.",
+    "customer": "Innotech Ltd",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2026-02-21T10:10:00Z"
+  },
+  {
+    "id": "TCK-1006",
+    "title": "Mobile app crashes on launch",
+    "description": "Android version 14 users experience crashes immediately after opening the app.",
+    "customer": "Skyline Ventures",
+    "priority": "Critical",
+    "status": "Open",
+    "createdAt": "2026-02-22T07:55:00Z"
+  },
+  {
+    "id": "TCK-1007",
+    "title": "Data export feature slow",
+    "description": "CSV exports take more than 2 minutes for datasets over 10,000 records.",
+    "customer": "Oceanic Airlines",
+    "priority": "Medium",
+    "status": "In Progress",
+    "createdAt": "2026-02-23T13:25:00Z"
+  },
+  {
+    "id": "TCK-1008",
+    "title": "Search functionality returns incomplete results",
+    "description": "Search queries do not return all relevant records when filtering by date.",
+    "customer": "Stark Industries",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "2026-02-24T09:40:00Z"
+  },
+  {
+    "id": "TCK-1009",
+    "title": "API rate limit too restrictive",
+    "description": "Clients are hitting the rate limit during peak hours causing service disruption.",
+    "customer": "Wayne Enterprises",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2026-02-24T15:12:00Z"
+  },
+  {
+    "id": "TCK-1010",
+    "title": "Notification emails duplicated",
+    "description": "Users receive duplicate email notifications for the same event.",
+    "customer": "Umbrella Corp",
+    "priority": "Low",
+    "status": "Resolved",
+    "createdAt": "2026-02-25T10:45:00Z"
+  },
+  {
+    "id": "TCK-1011",
+    "title": "User role permissions incorrect",
+    "description": "Standard users can access admin-only settings page.",
+    "customer": "Hooli",
+    "priority": "Critical",
+    "status": "In Progress",
+    "createdAt": "2026-02-26T08:05:00Z"
+  },
+  {
+    "id": "TCK-1012",
+    "title": "File upload size limit unclear",
+    "description": "Users are not informed about the 25MB upload limit and receive generic error messages.",
+    "customer": "Massive Dynamic",
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "2026-02-26T16:20:00Z"
+  },
+  {
+    "id": "TCK-1013",
+    "title": "Slow response from reporting module",
+    "description": "Monthly financial reports take too long to generate during end-of-month processing.",
+    "customer": "Soylent Corp",
+    "priority": "High",
+    "status": "In Progress",
+    "createdAt": "2026-02-27T09:00:00Z"
+  },
+  {
+    "id": "TCK-1014",
+    "title": "Session expires too quickly",
+    "description": "User sessions are expiring after 5 minutes of inactivity instead of the configured 30 minutes.",
+    "customer": "Cyberdyne Systems",
+    "priority": "Medium",
+    "status": "Open",
+    "createdAt": "2026-02-28T12:35:00Z"
+  },
+  {
+    "id": "TCK-1015",
+    "title": "Two-factor authentication not working",
+    "description": "SMS codes are not being validated correctly during login.",
+    "customer": "Wonka Industries",
+    "priority": "Critical",
+    "status": "Open",
+    "createdAt": "2026-03-01T07:50:00Z"
+  }
+]
