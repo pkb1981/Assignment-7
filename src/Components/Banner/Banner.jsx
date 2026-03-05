@@ -1,5 +1,9 @@
 
-const Banner = () => {
+const Banner = ({ tickets = [] }) => {
+
+    const inProgressCount = tickets.filter(t => t.status?.toLowerCase() === "in progress").length;
+    const resolvedCount = tickets.filter(t => t.status?.toLowerCase() === "resolved").length;
+
     return (
         <div>
             {/* banner from daisyUI */}
@@ -13,7 +17,7 @@ const Banner = () => {
                         <div className="max-w-md">
                             <h1 className="mb-5 text-5xl font-medium">In progress</h1>
                             <p className="mb-5">
-                                <span className="text-4xl">0</span>
+                                <span className="text-4xl">{inProgressCount}</span>
                             </p>
 
                         </div>
@@ -29,7 +33,7 @@ const Banner = () => {
                         <div className="max-w-md">
                             <h1 className="mb-5 text-5xl font-medium">Resolved</h1>
                             <p className="mb-5">
-                                <span className="text-4xl">0</span>
+                                <span className="text-4xl">{resolvedCount}</span>
                             </p>
 
                         </div>

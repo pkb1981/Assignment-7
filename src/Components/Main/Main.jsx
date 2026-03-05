@@ -1,66 +1,74 @@
-import { use } from 'react';
-import { CiCalendarDate } from "react-icons/ci";
-import { GoDotFill } from "react-icons/go";
-const Main = ({ ticketsPromise }) => {
+import { use, useState } from 'react';
+import TicketCard from '../TIcketCard/TIcketCard';
+
+
+const Main = ({ ticketsPromise, onTicketClick }) => {
     const allTickets = use(ticketsPromise)
-    console.log(allTickets);
+    // console.log(allTickets);
+
+    const [selectedTicket, setSelectedTicket] = useState([]);
+
+    const handleAddTask = (ticket) => {
+        const exists = selectedTicket.find(t => t.id === ticket.id);
+        if (!exists) {
+            const updatedTicket = { ...ticket, status: "in progress" };
+            const updatedTickets = [...selectedTicket, updatedTicket];
+            setSelectedTicket(updatedTickets);
+
+            // notify App.jsx to update Banner
+            if (onTicketClick) {
+                onTicketClick(updatedTickets);
+            }
+        }
+    };
 
     return (
-        <div className="mx-auto w-11/12 mt-4">
-            <h3 className="font-medium text-2xl my-4">Customer Tickets</h3>
+        <>
+            <h3 className="mx-auto w-11/12 font-medium text-2xl my-4">Customer Tickets</h3>
 
 
-            <div className="grid md:grid-cols-2 sm:grid-cols-1 w-2/3 gap-8">
-                {/* small card from daisy ui */}
-                {
+            <div className="flex justify-between  mt-4 mx-auto w-11/12">
 
-                    allTickets.map(ticket => <div className="card bg-base-100 card-xs shadow-sm">
-                        <div className="card-body">
-                            <div className="flex justify-between">
-                                <h2 className="card-title font-bold text-[14px]">{ticket.title}</h2>
+                <div className="grid md:grid-cols-2 sm:grid-cols-1 w-2/3 gap-8">
+                    {/* small card from daisy ui */}
+                    {/* eact ticket mapped and  */}
+                    {
 
-                                <button
-                                    className={`btn btn-sm flex items-center rounded-3xl px-2 text-[14px] font-medium
-                                        ${ticket.status?.toLowerCase() === "open"
-                                            ? "bg-[#B9F8CF] text-[#0B5E06]"
-                                            : ticket.status?.toLowerCase() === "in progress"
-                                                ? "bg-yellow-200 text-yellow-800"
-                                                : "bg-gray-200 text-gray-700"
-                                        }`}
-                                >
-                                    <GoDotFill size={25} />
-                                    {ticket.status}
-                                </button>
-                            </div>
+                        allTickets.map(ticket => <TicketCard key={ticket.id} ticket={ticket} handleAddTask={handleAddTask}>
+                        </TicketCard>)
+                    }
 
-                            <p className="text-[13px]">{ticket.description}</p>
-                            <div className="justify-between card-actions">
-                                <div className="flex space-x-2.5 font-bold">
-                                    <span>#{ticket.id}</span>
-                                    <span className={
-                                        ticket.priority === "LOW" ? "text-[#02A53B]" :
-                                            ticket.priority === "MEDIUM" ? "text-[#FEBB0C]" :
-                                                ticket.priority === "HIGH" ? "text-[#F83044]" :
-                                                    ticket.priority === "CRITICAL" ? "text-red-800" :
-                                                        ""
-                                    }>
-                                        {ticket.priority} PRIORITY
-                                    </span>
+                </div>
+
+
+                {/* Task  status area  */}
+                <div>
+                    <div className="font-medium text-2xl my-4">
+                        <h1>Task Status</h1>
+
+                        {
+                            selectedTicket.map(ticket => (
+                                <div key={ticket.id} className="p-4 border rounded-lg mt-2 mb-4">
+                                    <h2 className="mb-4 font-semibold text-[16px]">
+                                        {ticket.title}
+                                    </h2>
+
+                                    <button className="btn text-white rounded-xl w-full bg-[#02A53B]">
+                                        Complete
+                                    </button>
                                 </div>
-                                <div className="flex space-x-2.5">
-                                    <span className="font-bold text-xs">{ticket.customer}</span>
-                                    <div className="flex items-center">
-                                        <CiCalendarDate />
-                                        <span>{ticket.createdAt}</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>)
-                }
-            </div>
+                            ))
 
-        </div >
+                        }
+                    </div>
+
+                    <div className="font-medium text-2xl my-4">
+                        <h1>Resolved Task</h1>
+                    </div>
+                </div>
+
+            </div >
+        </>
     );
 };
 
