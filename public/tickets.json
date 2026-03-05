@@ -6,7 +6,7 @@
     "customer": "Acme Corp",
     "priority": "HIGH",
     "status": "Open",
-    "createdAt": "2026-02-18T09:15:00Z"
+    "createdAt": "2026-02-18"
   },
   {
     "id": "1002",
@@ -15,7 +15,7 @@
     "customer": "BrightTech Solutions",
     "priority": "CRITICAL",
     "status": "In Progress",
-    "createdAt": "2026-02-19T11:42:00Z"
+    "createdAt": "2026-02-19"
   },
   {
     "id": "1003",
@@ -24,7 +24,7 @@
     "customer": "Northwind Traders",
     "priority": "MEDIUM",
     "status": "Open",
-    "createdAt": "2026-02-20T08:30:00Z"
+    "createdAt": "2026-02-20"
   },
   {
     "id": "1004",
@@ -33,7 +33,7 @@
     "customer": "Globex Corporation",
     "priority": "HIGH",
     "status": "Resolved",
-    "createdAt": "2026-02-17T14:05:00Z"
+    "createdAt": "2026-02-17"
   },
   {
     "id": "1005",
@@ -42,7 +42,7 @@
     "customer": "Innotech Ltd",
     "priority": "HIGH",
     "status": "In Progress",
-    "createdAt": "2026-02-21T10:10:00Z"
+    "createdAt": "2026-02-21"
   },
   {
     "id": "1006",
@@ -51,7 +51,7 @@
     "customer": "Skyline Ventures",
     "priority": "CRITICAL",
     "status": "Open",
-    "createdAt": "2026-02-22T07:55:00Z"
+    "createdAt": "2026-02-22"
   },
   {
     "id": "1007",
@@ -60,7 +60,7 @@
     "customer": "Oceanic Airlines",
     "priority": "MEDIUM",
     "status": "In Progress",
-    "createdAt": "2026-02-23T13:25:00Z"
+    "createdAt": "2026-02-23"
   },
   {
     "id": "1008",
@@ -69,7 +69,7 @@
     "customer": "Stark Industries",
     "priority": "HIGH",
     "status": "Open",
-    "createdAt": "2026-02-24T09:40:00Z"
+    "createdAt": "2026-02-24"
   },
   {
     "id": "1009",
@@ -78,7 +78,7 @@
     "customer": "Wayne Enterprises",
     "priority": "MEDIUM",
     "status": "Open",
-    "createdAt": "2026-02-24T15:12:00Z"
+    "createdAt": "2026-02-24"
   },
   {
     "id": "1010",
@@ -87,7 +87,7 @@
     "customer": "Umbrella Corp",
     "priority": "LOW",
     "status": "Resolved",
-    "createdAt": "2026-02-25T10:45:00Z"
+    "createdAt": "2026-02-25"
   },
   {
     "id": "1011",
@@ -96,7 +96,7 @@
     "customer": "Hooli",
     "priority": "CRITICAL",
     "status": "In Progress",
-    "createdAt": "2026-02-26T08:05:00Z"
+    "createdAt": "2026-02-26"
   },
   {
     "id": "1012",
@@ -105,7 +105,7 @@
     "customer": "Massive Dynamic",
     "priority": "LOW",
     "status": "Open",
-    "createdAt": "2026-02-26T16:20:00Z"
+    "createdAt": "2026-02-26"
   },
   {
     "id": "1013",
@@ -114,7 +114,7 @@
     "customer": "Soylent Corp",
     "priority": "HIGH",
     "status": "In Progress",
-    "createdAt": "2026-02-27T09:00:00Z"
+    "createdAt": "2026-02-27"
   },
   {
     "id": "1014",
@@ -123,7 +123,7 @@
     "customer": "Cyberdyne Systems",
     "priority": "MEDIUM",
     "status": "Open",
-    "createdAt": "2026-02-28T12:35:00Z"
+    "createdAt": "2026-02-28"
   },
   {
     "id": "1015",
@@ -132,6 +132,6 @@
     "customer": "Wonka Industries",
     "priority": "CRITICAL",
     "status": "Open",
-    "createdAt": "2026-03-01T07:50:00Z"
+    "createdAt": "2026-03-01"
   }
 ]
