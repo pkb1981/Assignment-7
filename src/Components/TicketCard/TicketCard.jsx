@@ -2,17 +2,16 @@ import { CiCalendarDate } from "react-icons/ci";
 import { GoDotFill } from "react-icons/go";
 
 
-
 const TicketCard = ({ ticket, handleAddTask }) => {
 
     return (
-        <div onClick={() => handleAddTask(ticket)} className="card bg-base-100 card-xs shadow-sm cursor-pointer hover:shadow-lg transition">
-            <div className="card-body" >
-                <div className="flex justify-between">
-                    <h2 className="card-title font-bold text-[14px]">{ticket.title}</h2>
+        <div onClick={() => handleAddTask(ticket)} className="card bg-base-100 card-xs shadow-sm cursor-pointer hover:shadow-lg transition w-full sm:w-auto">
+            <div className="card-body p-3 sm:p-4" >
+                <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-2 sm:mb-0">
+                    <h2 className="card-title font-bold text-sm sm:text-[14px]">{ticket.title}</h2>
 
                     <button
-                        className={`btn btn-sm flex items-center rounded-3xl px-2 text-[14px] font-medium
+                        className={`btn btn-sm flex items-center rounded-3xl px-2 text-[12px] sm:text-[14px] font-medium
                                 ${ticket.status?.toLowerCase() === "open"
                                 ? "bg-[#B9F8CF] text-[#0B5E06]"
                                 : ticket.status?.toLowerCase() === "in progress"
@@ -20,14 +19,14 @@ const TicketCard = ({ ticket, handleAddTask }) => {
                                     : "bg-gray-200 text-gray-700"
                             }`}
                     >
-                        <GoDotFill size={25} />
+                        <GoDotFill size={20} className="sm:mr-1" />
                         {ticket.status}
                     </button>
                 </div>
 
-                <p className="text-[13px]">{ticket.description}</p>
-                <div className="justify-between card-actions">
-                    <div className="flex space-x-2.5 font-bold">
+                <p className="text-[12px] sm:text-[13px] mb-2">{ticket.description}</p>
+                <div className=" flex flex-col sm:flex-row justify-between items-start sm:items-center">
+                    <div className="flex flex-col sm:flex-row sm:space-x-2.5 font-bold mb-2 sm:mb-0">
                         <span>#{ticket.id}</span>
                         <span className={
                             ticket.priority === "LOW" ? "text-[#02A53B]" :
@@ -39,10 +38,10 @@ const TicketCard = ({ ticket, handleAddTask }) => {
                             {ticket.priority} PRIORITY
                         </span>
                     </div>
-                    <div className="flex space-x-2.5">
-                        <span className="font-bold text-xs">{ticket.customer}</span>
+                    <div className="flex space-x-2.5 text-[10px]">
+                        <span className="font-medium ">{ticket.customer}</span>
                         <div className="flex items-center">
-                            <CiCalendarDate />
+                            <CiCalendarDate className="mr-1" />
                             <span>{ticket.createdAt}</span>
                         </div>
                     </div>

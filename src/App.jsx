@@ -4,43 +4,36 @@ import Banner from './Components/Banner/Banner';
 import Main from './Components/Main/Main';
 import Navbar from './Components/Navbar/Navbar';
 
-// fetching the JSON data
 const fetchTickets = async () => {
-  const res = await fetch("tickets.json")
+  const res = await fetch("tickets.json");
   return res.json();
 }
 
 function App() {
-
   const ticketsPromise = fetchTickets();
 
-  // state to hold the selected ticket
-  const [selectedTickets, setSelectedTickets] = useState([]);
-
-  // function to handle click from TicketCard
-  const handleTicketClick = (ticketsArray) => {
-    setSelectedTickets(ticketsArray);
-  };
-
+  // State for in-progress and resolved tickets
+  const [inProgressTickets, setInProgressTickets] = useState([]);
+  const [resolvedTickets, setResolvedTickets] = useState([]);
 
   return (
     <>
-
-      {/* navbar section */}
-      <Navbar></Navbar>
-
-      {/* Banner Section */}
-      <Banner tickets={selectedTickets}></Banner>
-
-      {/* Main Section */}
+      <Navbar />
+      <Banner
+        inProgressTickets={inProgressTickets}
+        resolvedTickets={resolvedTickets}
+      />
       <Suspense>
         <Main
           ticketsPromise={ticketsPromise}
-          onTicketClick={handleTicketClick}></Main>
+          inProgressTickets={inProgressTickets}
+          setInProgressTickets={setInProgressTickets}
+          resolvedTickets={resolvedTickets}
+          setResolvedTickets={setResolvedTickets}
+        />
       </Suspense>
-
     </>
-  )
+  );
 }
 
-export default App
+export default App;
