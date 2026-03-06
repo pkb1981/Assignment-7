@@ -1,3 +1,5 @@
+// react icons imported for twitter facebook email and linked in logo
+// footer section design from daisyUI
 import { BsTwitterX } from "react-icons/bs";
 import { CiFacebook } from "react-icons/ci";
 import { MdEmail } from "react-icons/md";

@@ -1,9 +1,12 @@
+// two react icons imported for dot and calender icon
 import { CiCalendarDate } from "react-icons/ci";
 import { GoDotFill } from "react-icons/go";
 
-
+// two props received from parent Component Main.jsx
 const TicketCard = ({ ticket, handleAddTask }) => {
 
+    // adding onClick event for ticket card to be clicked
+    // giving id, title, description, customer, priority, status, createdAt in each card dynamically from already stored data in ticket.json
     return (
         <div onClick={() => handleAddTask(ticket)} className="card bg-base-100 card-xs shadow-sm cursor-pointer hover:shadow-lg transition w-full sm:w-auto">
             <div className="card-body p-3 sm:p-4" >

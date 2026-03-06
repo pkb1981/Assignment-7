@@ -1,5 +1,8 @@
+// importing banner vecotr image from assets folder in src
 import bannerImg from "../../assets/vector1.png";
 
+// two props send to Banner Components with empty array
+// two variable holds the two type of info of inprogress & resolve task
 const Banner = ({ inProgressTickets = [], resolvedTickets = [] }) => {
     const inProgressCount = inProgressTickets.length;
     const resolvedCount = resolvedTickets.length;
@@ -15,7 +18,7 @@ const Banner = ({ inProgressTickets = [], resolvedTickets = [] }) => {
                         src={bannerImg}
                         className="absolute left-0 bottom-0 h-full object-contain"
                     />
-                    {/* Right Vector  scale-x-[-1] make the vector image face to face*/}
+                    {/* Right Vector  scale-x-[-1] flips the image along the X-axis so it faces the other direction*/}
                     <img
                         src={bannerImg}
                         className="absolute right-0 bottom-0 h-full object-contain scale-x-[-1]"
@@ -23,6 +26,8 @@ const Banner = ({ inProgressTickets = [], resolvedTickets = [] }) => {
 
                     <div className="hero-overlay"></div>
                     <div className="hero-content text-neutral-content text-center">
+
+                        {/* inProgressCount show the no of count  */}
                         <div className="max-w-md">
                             <h1 className="mb-2 sm:mb-5 text-3xl sm:text-5xl font-medium">In progress</h1>
                             <p className="mb-2 sm:mb-5"><span className="text-3xl sm:text-4xl">{inProgressCount}</span></p>
@@ -37,7 +42,7 @@ const Banner = ({ inProgressTickets = [], resolvedTickets = [] }) => {
                         src={bannerImg}
                         className="absolute left-0 bottom-0 h-full object-contain"
                     />
-                    {/* Right Vector  scale-x-[-1] make the vector image face to face*/}
+                    {/* Right Vector  scale-x-[-1] flips the image along the X-axis so it faces the other direction*/}
                     <img
                         src={bannerImg}
                         className="absolute right-0 bottom-0 h-full object-contain scale-x-[-1]"
@@ -45,6 +50,8 @@ const Banner = ({ inProgressTickets = [], resolvedTickets = [] }) => {
 
                     <div className="hero-overlay"></div>
                     <div className="hero-content text-neutral-content text-center">
+
+                        {/* resolvedCount show the no of resolved tickets  */}
                         <div className="max-w-md">
                             <h1 className="mb-2 sm:mb-5 text-3xl sm:text-5xl font-medium">Resolved</h1>
                             <p className="mb-2 sm:mb-5"><span className="text-3xl sm:text-4xl">{resolvedCount}</span></p>
