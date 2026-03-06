@@ -1,3 +1,5 @@
+import bannerImg from "../../assets/vector1.png";
+
 const Banner = ({ inProgressTickets = [], resolvedTickets = [] }) => {
     const inProgressCount = inProgressTickets.length;
     const resolvedCount = resolvedTickets.length;
@@ -5,7 +7,20 @@ const Banner = ({ inProgressTickets = [], resolvedTickets = [] }) => {
     return (
         <div className="w-11/12 mx-auto my-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <div className="hero h-52 sm:h-64  rounded-lg overflow-hidden bg-gradient-to-r from-[#632EE3] to-[#9F62F2]">
+
+                {/*left banner imported from daisy ui */}
+                <div className="relative hero h-52 sm:h-64 rounded-lg overflow-hidden bg-gradient-to-r from-[#632EE3] to-[#9F62F2]">
+                    {/* Left Vector */}
+                    <img
+                        src={bannerImg}
+                        className="absolute left-0 bottom-0 h-full object-contain"
+                    />
+                    {/* Right Vector  scale-x-[-1] make the vector image face to face*/}
+                    <img
+                        src={bannerImg}
+                        className="absolute right-0 bottom-0 h-full object-contain scale-x-[-1]"
+                    />
+
                     <div className="hero-overlay"></div>
                     <div className="hero-content text-neutral-content text-center">
                         <div className="max-w-md">
@@ -15,7 +30,19 @@ const Banner = ({ inProgressTickets = [], resolvedTickets = [] }) => {
                     </div>
                 </div>
 
-                <div className="hero h-52 sm:h-64 rounded-lg overflow-hidden bg-gradient-to-r from-[#54CF68] to-[#00827A]">
+                {/* right banner imported form daisy ui */}
+                <div className="relative hero h-52 sm:h-64 rounded-lg overflow-hidden bg-gradient-to-r from-[#54CF68] to-[#00827A]">
+                    {/* Left Vector */}
+                    <img
+                        src={bannerImg}
+                        className="absolute left-0 bottom-0 h-full object-contain"
+                    />
+                    {/* Right Vector  scale-x-[-1] make the vector image face to face*/}
+                    <img
+                        src={bannerImg}
+                        className="absolute right-0 bottom-0 h-full object-contain scale-x-[-1]"
+                    />
+
                     <div className="hero-overlay"></div>
                     <div className="hero-content text-neutral-content text-center">
                         <div className="max-w-md">
@@ -25,7 +52,7 @@ const Banner = ({ inProgressTickets = [], resolvedTickets = [] }) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 
